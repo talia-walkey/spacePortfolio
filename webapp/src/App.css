@@ -1,0 +1,233 @@
+@media only screen and (min-width: 850px) {
+.App {
+    text-align: center;
+}
+.nameHeading{
+    font-size: 18pt;
+}
+#tbioBkg {
+    text-align: left;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin: auto;
+    left: 5%;
+}
+#abioBkg {
+    text-align: left;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin: auto;
+    left: 5%;
+}
+#abioImg{
+    height: 300px;
+    margin: auto;
+}
+#tbioImg{
+    height: 300px;
+    margin: auto;
+}
+.leftBox{
+    left: 0px;
+    position: absolute;
+    width: 40%;
+    margin: auto;
+}
+.rightBox{
+    right: 10%;
+    position: absolute;
+    width: 60%;
+    margin: auto;
+}
+#bkgImg{
+    width:100%;
+    position: relative;
+    left: 0;
+    z-index: 97;
+}
+#topPage{
+    
+}
+
+#findOutMore{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 25%;
+    height: 8%;
+    z-index: 100;
+}
+#welcomeDiv{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 100%;
+    height: 8%;
+    z-index: 100;
+    font-size: 30pt;
+    color: white;
+}
+#introBio{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    text-align: left;
+}
+    }
+
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+.App {
+    text-align: center;
+}
+.nameHeading{
+    font-size: 18pt;
+}
+#tbioBkg {
+    text-align: left;
+    width: 90%;
+    left: 5%;
+    height: 350px;
+    position: relative;
+}
+#abioBkg {
+    text-align: left;
+    width: 90%;
+    left: 5%;
+    height: 350px;
+    position: relative;
+}
+#abioImg{
+    height: 300px;
+}
+#tbioImg{
+    height: 300px;
+}
+.leftBox{
+    left: 0px;
+    position: absolute;
+    width: 40%;
+    
+}
+.rightBox{
+    right: 5%;
+    position: absolute;
+    width: 45%;
+}
+#bkgImg{
+    width:100%;
+    position: relative;
+    left: 0;
+    z-index: 97;
+}
+#topPage{
+    
+}
+
+#findOutMore{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 5%;
+    z-index: 100;
+}
+#welcomeDiv{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 8%;
+    z-index: 100;
+    font-size: 18pt;
+    color: white;
+} 
+    #introBio{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    text-align: left;
+}
+}
+
+
+
+
+
+@media only screen and (max-width: 600px){
+.App {
+    text-align: center;
+}
+.nameHeading{
+    font-size: 18pt;
+}
+#tbioBkg {
+    text-align: left;
+    width: 90%;
+    height: 350px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+}
+#abioBkg {
+    text-align: left;
+    width: 90%;
+    height: 350px;
+    position: relative;
+    margin: auto;
+    top: 210px;
+}
+#abioImg{
+    height: 300px;
+    position: absolute;
+}
+#tbioImg{
+    height: 300px;
+    position: absolute;
+}
+.leftBox{
+    position: absolute;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.rightBox{
+    position: absolute;
+    width: 90%;
+    top:340px;
+}
+#bkgImg{
+    width:100%;
+    position: relative;
+    left: 0;
+    z-index: 97;
+}
+#topPage{
+    
+}
+
+#findOutMore{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 5%;
+    z-index: 100;
+}
+#welcomeDiv{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+    height: 8%;
+    z-index: 100;
+    font-size: 14pt;
+    color: white;
+} 
+    #introBio{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    text-align: left;
+}
+}
