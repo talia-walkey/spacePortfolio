@@ -1,43 +1,70 @@
 import React, { Component } from 'react';
 import './App.css';
+import Chat from './comp/chat.js';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Titillium Web:300,400,700', 'sans-serif']
+  }
+});
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state={
+           tab:0 
+        };
+        
+        this.startChat=this.startChat.bind(this);
+    }
+    
+    startChat(){
+        this.setState({
+            tab:1
+        })
+    }
   render() {
-    return (
-      <div className="App">
-        <div id="topPage">
-            <img src={require('./Image/bkgImg2.jpg')} id="bkgImg" />
-        <div id="welcome" class="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
-            <button id="findOutMore">Find Out More</button>
-        </div>
-
-<div id="introBio">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris molestie nibh est, nec semper eros interdum vitae. Curabitur ultricies consectetur lobortis. Curabitur vehicula, diam vitae finibus sodales, magna lacus convallis tortor, quis tempus velit turpis a purus. Etiam pulvinar, nibh quis blandit pulvinar, erat arcu imperdiet risus, ut porttitor urna mauris ut mi. In a vestibulum justo. Aenean eros augue, ullamcorper et tortor in, venenatis tincidunt metus. Praesent vulputate lectus turpis, nec maximus nunc venenatis at.
-
-    Praesent sed nisl at justo sagittis sagittis eget id felis. Proin interdum mi id nisi sagittis commodo. Maecenas volutpat purus purus, sit amet tempus arcu congue tempor. Vestibulum fringilla eleifend magna ultricies iaculis. Nulla posuere a arcu nec gravida. Donec sit amet molestie nibh. Aenean arcu sem, porta ac vehicula in, maximus vel elit. Vestibulum ut sapien at lacus ornare cursus. Integer porta sed metus quis convallis. Aliquam erat volutpat. Quisque eu mauris malesuada, finibus purus id, rutrum mauris. Curabitur congue neque eu augue pharetra, aliquet mattis metus efficitur. Quisque eu consectetur libero. Aliquam erat volutpat. Phasellus at enim vel leo volutpat tincidunt consectetur sed nunc. Aenean molestie in arcu sed laoreet.
-</div>
-
-<br/>
-<br/>
-        
-        <div id="tbioBkg">
-            <div class="nameHeading">Talia Walkey</div>
-            <div class="leftBox"><img src={require('./Image/tbioImg.png')} id="tbioImg"/></div>
-        
-            <div class="rightBox">
-                I am a marker, developer, and designer with a Digital Design and Development Diploma from British Columbia Institute of Technology! Not only am I extremely diligent, organized, and focused, I am comfortable pitching myself, my company, and my product. I have skills in everything from design to development of web and mobile applications as well as I have learned the business skills to market them. I am proficient with front-end, and back-end development, along with Adobe Creative Suite. 
+      var comp=null;
+      if(this.state.tab ===0){
+          comp=(
+          <div>
+          <button onClick={this.startChat}>CHAT</button>
+            <div id="topPage">
+                <img src={require('./Image/background.svg')} id="bkgImg" />
+                <div id="welcome" class="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
             </div>
 
+            <div id="images">
+                <img src={require('./Image/AlynnaImg.png')} id="aimg" />
+                <img src={require('./Image/TaliaImg.png')} id="timg" />
+            </div>
+
+        <div id="tbioBkg">
+                I am a marker, developer, and designer with a Digital Design and Development Diploma from British Columbia Institute of Technology! I have skills in everything from design to development of web and mobile applications as well as I have learned the business skills to market them. 
         </div>
+                <h1 id="tname">Talia Walkey</h1>
+                <img src={require('./Image/speechleft.png')} id="speechleft" />
         <br/>
         <div id="abioBkg">
-            <div class="nameHeading">Alynna Alcira</div>
-            <div class="leftBox"><img src={require('./Image/abioImg.jpg')} id="abioImg" /></div>
-            
-            <div class="rightBox">
-                Hello! I am an aspiring UX/UI designer currently studying Digital Design and Development at BCIT. I am a creative and quality driven individual, motivated to create new and innovating user experiences. I love to bring my ideas to life, either through graphics, videos, and/or websites. I have digital design skills within Adobe's Creative Cloud in Photoshop, Illustrator, Premiere Pro, and After Effects. My development skills include HTML, CSS, and JavaScript.
-            </div>
+                Hello! I am an aspiring UX/UI designer currently studying Digital Design and Development at BCIT. I am a creative and quality driven individual, motivated to create new user experiences. I love to bring my ideas to life, either through graphics and/or websites.
         </div>
+                <h1 id="aname">Alynna Alcira</h1>
+
+                <img src={require('./Image/speechright.png')} id="speechright" />
+          </div>
+      )
+      }else if(this.state.tab ===1){
+         comp=(
+             <Chat/>
+             )
+      }
+      
+      
+    return (
+      <div className="App">
+            {comp}
       </div>
     );
   }
