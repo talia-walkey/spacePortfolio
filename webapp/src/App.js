@@ -30,7 +30,7 @@ class App extends Component {
       if(this.state.tab ===0){
           comp=(
           <div>
-          <button onClick={this.startChat}>CHAT</button>
+              <button id="chatButton" onClick={this.startChat}>Lets Chat!!</button>
             <div id="topPage">
                 <img src={require('./Image/background.svg')} id="bkgImg" />
                 <div id="welcome" class="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
@@ -53,15 +53,26 @@ class App extends Component {
                 <h1 id="aname">Alynna Alcira</h1>
 
                 <img src={require('./Image/speechright.png')} id="speechright" />
+                
           </div>
+        
       )
-      }else if(this.state.tab ===1){
-         comp=(
-             <Chat/>
-             )
+      }else if(comp=1){
+          comp=(
+          <div>
+            <div id="topPage">
+                <img src={require('./Image/background.svg')} id="bkgImg" />
+                <div id="welcome" class="nameHeading" id="welcomeDiv">Time to Chat!</div>
+            </div>
+                    
+        <div id="chatDiv">
+            <Chat/>
+        </div>
+                
+          </div>
+        
+      )
       }
-      
-      
     return (
       <div className="App">
             {comp}
