@@ -64,7 +64,7 @@ class Chat extends Component {
       var comp = null;
       if(this.state.mode===0){
           comp = (
-                <div>
+                <div class="chatBox">
                     <input 
                         onChange={this.handleName}
                         type="text" 
@@ -86,7 +86,7 @@ class Chat extends Component {
           })
           
           comp=(
-                <div id="chatBox">
+                <div class="chatBox">
                     <div id="chatDisplay">{allmsgs}</div>
                     <div id="controls">
                         <input 
@@ -112,10 +112,11 @@ class Chat extends Component {
     return (
         <div className="App">
             {comp}
-            <div>
+            <div id="allNames">
                 People who are online <hr/> 
                 {allnames}
             </div>
+        
         </div>
     );
   }
