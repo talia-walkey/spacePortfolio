@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import WebFont from 'webfontloader';
+import mySocket from ‘socket.io-client’;
 
 WebFont.load({
   google: {

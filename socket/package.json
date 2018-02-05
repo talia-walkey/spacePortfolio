@@ -1,7 +1,6 @@
 {
   "name": "socket",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "socket.io": "^2.0.4"
@@ -9,8 +8,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
